@@ -1,0 +1,145 @@
+.tainan {
+    display: flex;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.area {
+    border: burlywood 2px solid;
+    border-radius: 10%;
+    margin: 25px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    transition: all 2s;
+}
+
+.hot>button {
+    margin-left: 20px;
+}
+
+.area:hover {
+    background-color: cornsilk;
+}
+
+.lists {
+    width: 25%;
+    height: 500px;
+    border: 1px solid goldenrod;
+    display: none;
+    overflow: scroll;
+}
+
+.lists>li {
+    margin-bottom: 15px;
+}
+
+#map {
+    display: inline-block;
+    width: 74%;
+    height: 500px;
+    border: 2px solid rgb(196, 174, 214);
+    vertical-align: top;
+}
+
+.visit, .nav {
+    box-sizing: border-box;
+    border-bottom: none;
+    text-align: center;
+}
+
+.visit {
+    width: 100%;
+    height: 100px;
+}
+
+.nav {
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.active {
+    display: none;
+}
+
+h5 {
+    width: 100%;
+    padding: 10px;
+    background-color: cornsilk;
+    font-size: 16px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.visit>p {
+    padding: 10px;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.nav>p {
+    width: 100%;
+    padding: 10px 10px 0 10px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.address, .tel, .intro {
+    border-bottom: lightcoral 1px solid;
+}
+
+.open {
+    width: 100%;
+    height: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: cornsilk 2px solid;
+    text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 991.99px) {
+    .hot {
+        display: block;
+        padding: 20px;
+    }
+    .lists {
+        width: 30%;
+    }
+    #map {
+        width: 69%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.99px) {
+    .hot {
+        display: block;
+        padding: 20px;
+    }
+    .lists {
+        width: 30%;
+    }
+    #map {
+        width: 69%;
+    }
+}
+
+@media (max-width: 575.99px) {
+    .hot {
+        display: block;
+        padding: 20px;
+    }
+    .lists {
+        width: 30%;
+    }
+    #map {
+        width: 69%;
+    }
+}
