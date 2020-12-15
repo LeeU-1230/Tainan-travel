@@ -10,7 +10,6 @@ fetch('https://opengov.tainan.gov.tw/OpenApi/api/service/Get/bb7ba3ff-1974-4400-
     .then(
         (result) => {
             data = result.data;
-            console.log(data);
         }
     )
 
@@ -41,7 +40,9 @@ function Print(value) {
                 <a class="open btn btn-primary" data-lat='${data[i].lat}' data-long='${data[i].long}'>景點資訊 ▼ Open</a>
                
                 <div class='nav active'>
-                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>&ensp;地址</p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>&ensp;地址
+                    <a  class="go btn btn-outline-success" href="https://www.google.com.tw/maps/place/${data[i].address.slice(4)}" target="_blank">前往</a>
+                    </p>
                     <p class='address'>${data[i].address}</p>
                     <p><i class="fa fa-phone" aria-hidden="true"></i>&ensp;電話</p>
                     <p  class='tel'>${data[i].tel}</p>
@@ -60,7 +61,9 @@ function Print(value) {
                     <a class="open btn btn-primary" data-lat='${data[i].lat}' data-long='${data[i].long}'>景點資訊 ▼ Open</a>
 
                     <div class='nav active'>
-                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>&ensp;地址</p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>&ensp;地址
+                    <a  class="go btn btn-outline-success" href="https://www.google.com.tw/maps/place/${data[i].address.slice(4)}" target="_blank">前往</a>
+                    </p>
                     <p class='address'>&ensp;${data[i].address}</p>
                     <p><i class="fa fa-phone" aria-hidden="true"></i>&ensp;電話</p>
                     <p  class='tel'>${data[i].tel}</p>
@@ -76,17 +79,19 @@ function Print(value) {
 
 
 lists.addEventListener('click', function (e) {
-    e.preventDefault();
 
-    let name = e.target.parentNode.children[0].children[0].innerText;         // 取得地名
-    let nav = e.target.parentNode.children[2];                                // 取得詳細資訊區塊
-    let addr = [e.target.dataset.lat, e.target.dataset.long];                 // 取得座標
+    if (e.target.innerText == '景點資訊 ▼ Open') {
+        let name = e.target.parentNode.children[0].children[0].innerText;         // 取得地名
+        let nav = e.target.parentNode.children[2];                                // 取得詳細資訊區塊
+        let addr = [e.target.dataset.lat, e.target.dataset.long];                 // 取得座標
 
-    nav.classList.toggle('active');                                           // 切換詳細資訊區塊
+        nav.classList.toggle('active');                                           // 切換詳細資訊區塊
 
-    L.marker(addr).addTo(get_map)                                             // 定位此景點座標
-        .bindPopup(`${name}`)
-        .openPopup();
+        L.marker(addr).addTo(get_map)                                             // 定位此景點座標
+            .bindPopup(`${name}`)
+            .openPopup();
+    }
+
 })
 
 let hot = document.querySelector('.hot');

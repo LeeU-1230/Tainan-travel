@@ -1,0 +1,107 @@
+p {
+    margin-bottom: 0;
+}
+
+.container {
+    background-image: url('https://drive.google.com/uc?export=view&id=13fRQhg_4taiazC8YcYlQs-dQMVTZxeEY');
+    width: 100%;
+    height: 700px;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.backphoto {
+    width: 100%;
+    height: 450px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.area {
+    background-color: whitesmoke;
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 50%;
+    border-radius: 25px;
+    outline: none;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 20px;
+}
+
+h1 {
+    font-weight: bolder;
+    letter-spacing: 25px;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hotel {
+    width: 45%;
+    box-sizing: border-box;
+    margin: 15px;
+    padding: 15px;
+}
+
+.intro {
+    width: 100%;
+    height: 250px;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    border-bottom: 1px grey solid;
+}
+
+.information {
+    display: block;
+    background-color: rgb(255, 255, 226);
+    padding: 15px;
+    position: relative;
+}
+
+.information p {
+    margin-top: 10px;
+}
+
+.active {
+    display: none;
+}
+
+h5 {
+    background-color: rgb(255, 255, 226);
+    padding: 15px;
+    font-weight: bold;
+}
+
+.go {
+    position: absolute;
+    right: 15px;
+}
+
+ul {
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (min-width: 576px) and (max-width: 767.99px) {
+    .hotel {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.99px) {
+    .hotel {
+        width: 100%;
+    }
+}

@@ -1,0 +1,57 @@
+.sort {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul,
+li {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+
+.active {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(221, 221, 221);
+    padding: 10px;
+    margin-bottom: 15px;
+    display: none;
+    overflow-y: scroll;
+}
+
+.show {
+    display: block;
+}
+
+.title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    width: 49%;
+    vertical-align: sub;
+}
+
+.information {
+    display: inline-block;
+    border-left: pink 1px solid;
+    width: 49%;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.inbox {
+    border-bottom: 2px orange dotted;
+}
+
+.photo {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.photo img {
+    width: 100%;
+}
