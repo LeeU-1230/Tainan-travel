@@ -147,6 +147,9 @@ h5 {
     #map {
         width: 100%;
     }
+    .select div:first-child{
+        color:black;
+    }
 }
 
 @media (max-width: 575.99px) {
@@ -159,5 +162,8 @@ h5 {
     }
     #map {
         width: 100%;
+    }
+    .select div:first-child{
+        color:black;
     }
 }

@@ -21,6 +21,9 @@ function changeArea(e) {
 
     let value = e.target.value;
     Print(value);
+    
+    window.document.body.scrollTop = 800;              
+    window.document.documentElement.scrollTop = 800;
 }
 
 function Print(value) {
@@ -102,4 +105,7 @@ hot.addEventListener('click', function (e) {
     lists.style.display = 'inline-block';
     let value = e.target.value;
     Print(value);
+
+    window.document.body.scrollTop = 800;              
+    window.document.documentElement.scrollTop = 800;
 })

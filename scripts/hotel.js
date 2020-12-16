@@ -55,6 +55,9 @@ function change_area(e) {
 
     box.innerHTML = str;
     printPage(area_array);
+
+    window.document.body.scrollTop = 300;              
+    window.document.documentElement.scrollTop = 300;
 }
 
 function printPage(arr) {
