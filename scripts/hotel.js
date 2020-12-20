@@ -108,7 +108,7 @@ function printPage(arr) {
                     <a class="open btn btn-info">聯絡資訊 ▼ Open</a>
                     <div class="information active">
                         <span>類別:&ensp;${arr[j].category}</span>
-                        <a class='go btn btn-outline-primary' href="https://www.google.com.tw/maps/place/${area_array[j].address.slice(4,area_array[j].address.lastIndexOf('號')+1)}" target="_blank">前往店家</a>
+                        <a class='go btn btn-outline-primary' href="https://www.google.com.tw/maps/place/${arr[j].address.slice(4,arr[j].address.lastIndexOf('號')+1)}" target="_blank">前往店家</a>
                         <p>地址:&ensp;${arr[j].address}</p>
                         <p>tel:&ensp;${arr[j].fax}</p>
                     </div>
