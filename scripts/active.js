@@ -21,7 +21,9 @@ fetch('https://opengov.tainan.gov.tw/OpenApi/api/service/Get/7aa8a71c-95ab-49e8-
         // console.log(active_list);
         // print_btn(sort_list);
     }
-)
+).catch(
+    alert(`This API Error!`)
+);
 
 
 function print() {
